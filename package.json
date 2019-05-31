@@ -1,0 +1,35 @@
+{
+  "name": "jest-google-maps-mock",
+  "version": "1.0.0",
+  "description": "Jest mock for google maps",
+  "license": "MIT",
+  "author": "hello@webappsolutions.de",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hupe1980/jest-google-maps-mock"
+  },
+  "keywords": [
+    "google",
+    "google-maps",
+    "maps",
+    "jest",
+    "mock"
+  ],
+  "files": [
+    "lib/**"
+  ],
+  "scripts": {
+    "build": "babel src -d lib --delete-dir-on-start",
+    "build:watch": "babel src -d lib  --watch --delete-dir-on-start",
+    "test": "jest --env=jsdom",
+    "test:watch": "jest --watch --env=jsdom",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-jest": "^24.8.0",
+    "jest": "^24.8.0"
+  }
+}
