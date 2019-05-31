@@ -1,6 +1,6 @@
 # jest-google-maps-mock
 
-> Jest google maps mock
+> Jest mock for google maps
 
 ## Installation
 

@@ -1,6 +1,6 @@
 {
   "name": "jest-google-maps-mock",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Jest mock for google maps",
   "license": "MIT",
   "author": "hello@webappsolutions.de",
@@ -15,8 +15,9 @@
     "jest",
     "mock"
   ],
+  "main": "lib/index.js",
   "files": [
-    "lib/**"
+    "lib"
   ],
   "scripts": {
     "build": "babel src -d lib --delete-dir-on-start",
