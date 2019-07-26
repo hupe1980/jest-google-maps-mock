@@ -1,6 +1,6 @@
 {
   "name": "jest-google-maps-mock",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Jest mock for google maps",
   "license": "MIT",
   "author": "hello@webappsolutions.de",
@@ -20,17 +20,18 @@
     "lib"
   ],
   "scripts": {
-    "build": "babel src -d lib --delete-dir-on-start",
-    "build:watch": "babel src -d lib  --watch --delete-dir-on-start",
+    "build": "rimraf lib && babel src -d lib --delete-dir-on-start",
+    "build:watch": "rimraf lib && babel src -d lib  --watch --delete-dir-on-start",
     "test": "jest --env=jsdom",
     "test:watch": "jest --watch --env=jsdom",
     "prepare": "npm run build"
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
     "babel-jest": "^24.8.0",
-    "jest": "^24.8.0"
+    "jest": "^24.8.0",
+    "rimraf": "^2.6.3"
   }
 }
