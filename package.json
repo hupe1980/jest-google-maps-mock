@@ -1,9 +1,8 @@
 {
   "name": "jest-google-maps-mock",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Jest mock for google maps",
   "license": "MIT",
-  "author": "hello@webappsolutions.de",
   "repository": {
     "type": "git",
     "url": "https://github.com/hupe1980/jest-google-maps-mock"
@@ -27,11 +26,11 @@
     "prepare": "npm run build"
   },
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "babel-jest": "^24.8.0",
-    "jest": "^24.8.0",
-    "rimraf": "^2.6.3"
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0",
+    "rimraf": "^2.7.1"
   }
 }
