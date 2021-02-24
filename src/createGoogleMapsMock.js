@@ -205,6 +205,9 @@ const createGoogleMapsMock = (libraries = []) => {
         'getBounds',
         'panToBounds',
       ]);
+      this.getDiv = jest.fn().mockImplementation(function () {
+        return this.mapDiv;
+      });
     }),
     MapTypeControlStyle: {
       DEFAULT: 0,
