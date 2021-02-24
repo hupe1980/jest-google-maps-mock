@@ -199,6 +199,7 @@ const createGoogleMapsMock = (libraries = []) => {
         'setOptions',
         'setStreetView',
         'setTilt',
+        'getZoom',
         'setZoom',
         'fitBounds',
         'getBounds',
