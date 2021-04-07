@@ -346,6 +346,9 @@ const createGoogleMapsMock = (libraries = []) => {
       AutocompleteService: jest.fn(() => ({
         getPlacePredictions: jest.fn(),
       })),
+      PlacesServiceStatus: jest.fn(() => ({
+        OK: 'OK'
+      })),
     };
   }
 
