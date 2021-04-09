@@ -257,8 +257,16 @@ const createGoogleMapsMock = (libraries = []) => {
     },
     OverlayView: function() {},
     Point: function() {},
-    Polygon: function() {},
-    Polyline: function() {},
+    Polygon: jest.fn().mockImplementation(function (opts) {
+      this.opts = opts;
+      createMVCObject(this);
+      createMockFuncsFromArray(this, ['setDraggable', 'setEditable', 'setMap', 'setOptions', 'setPath', 'setPaths', 'setVisible']);
+    }),
+    Polyline: jest.fn().mockImplementation(function (opts) {
+      this.opts = opts;
+      createMVCObject(this);
+      createMockFuncsFromArray(this, ['setDraggable', 'setEditable', 'setMap', 'setOptions', 'setPath', 'setVisible']);
+    }),
     Rectangle: function() {},
     SaveWidget: function() {},
     ScaleControlStyle: {
