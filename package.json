@@ -1,6 +1,6 @@
 {
   "name": "jest-google-maps-mock",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Jest mock for google maps",
   "license": "MIT",
   "repository": {
