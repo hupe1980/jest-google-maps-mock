@@ -226,6 +226,7 @@ const createGoogleMapsMock = (libraries = []) => {
     Marker: jest.fn().mockImplementation(function(opts) {
       this.opts = opts;
       this.icon = opts.icon;
+      this.label = opts.label;
       createMVCObject(this);
       createMockFuncsFromArray(this, [
         'setMap',
@@ -240,6 +241,9 @@ const createGoogleMapsMock = (libraries = []) => {
       this.getIcon = jest.fn().mockImplementation(function () {
         return new maps.ReadonlyIcon(this.icon);
       });
+      this.getLabel = jest.fn().mockImplementation(function(){
+        return this.label;
+      })
     }),
     ReadonlyIcon: jest.fn().mockImplementation(function (opts) {
       this.opts = opts;
