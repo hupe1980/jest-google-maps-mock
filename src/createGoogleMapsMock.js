@@ -225,6 +225,8 @@ const createGoogleMapsMock = (libraries = []) => {
     MapTypeRegistry: function() {},
     Marker: jest.fn().mockImplementation(function(opts) {
       this.opts = opts;
+      this.icon = opts.icon;
+      this.label = opts.label;
       createMVCObject(this);
       createMockFuncsFromArray(this, [
         'setMap',
@@ -236,6 +238,16 @@ const createGoogleMapsMock = (libraries = []) => {
         'setVisible',
         'setZIndex',
       ]);
+      this.getIcon = jest.fn().mockImplementation(function () {
+        return new maps.ReadonlyIcon(this.icon);
+      });
+      this.getLabel = jest.fn().mockImplementation(function(){
+        return this.label;
+      })
+    }),
+    ReadonlyIcon: jest.fn().mockImplementation(function (opts) {
+      this.opts = opts;
+      this.anchor = opts.anchor;
     }),
     MarkerImage: function() {},
     MaxZoomService: function() {
@@ -256,7 +268,6 @@ const createGoogleMapsMock = (libraries = []) => {
       ik: 5,
     },
     OverlayView: function() {},
-    Point: function() {},
     Polygon: jest.fn().mockImplementation(function (opts) {
       this.opts = opts;
       createMVCObject(this);
@@ -269,6 +280,10 @@ const createGoogleMapsMock = (libraries = []) => {
     }),
     Rectangle: function() {},
     SaveWidget: function() {},
+    Point: jest.fn().mockImplementation(function (x, y) {
+      this.x = x;
+      this.y = y;
+    }),
     ScaleControlStyle: {
       DEFAULT: 0,
     },
